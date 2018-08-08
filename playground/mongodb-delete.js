@@ -15,9 +15,13 @@ if (err) {
  /*	db.collection('Users').deleteOne({location:'new york'}).then((result) => {
  		console.log(result);
  	});*/
-
- 	db.collection('Users').findOneAndDelete({name:'Something to do1'}).then((result) => {
+/*
+db.collection('Users').findOneAndDelete({text:'Eat lunch'}).then((result) => {
  		console.log(result);
- 	}); 
+ 	});
+*/
+db.collection('Users').findOneAndDelete({ _id: new ObjectID("5b5f66808cb6fd2788c7b70d")}).then((result) => {
+ 		console.log(JSON.stringify(result,undefined,2));
+ 	});
 });
   
